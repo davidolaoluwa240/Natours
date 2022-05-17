@@ -1,0 +1,67 @@
+// Three Pillars to write Good HTML and CSS
+
+1. Responsive Design
+   -fluid layouts
+   -media queries
+   -responsive images
+   -correct units
+   -Desktop first vs mobile first
+
+2. Maintainable and scalable code
+   -clean
+   -easy to understand
+   -growth
+   -reusable
+   -how to organize files
+   -how to name classes
+   -how to structure html
+
+3. web performance
+   -less http request
+   -less code
+   -compress code
+   -use css preprocessor
+   -less images
+   -compressed images
+
+HTML LOAD => HTML PARSE => DOCUMENT OBJECT MODEL(DOM) IS CREATED
+===========> CSS LOAD => CSS PARSE => CSS OBJECT MODEL(CSSOM) IS CREATED
+CSS PARSING PHASE
+
+- Browser resolve conflicting css rules due to cascade
+- Browser process the last value to be rendered
+
+Cascade
+It is process of combining different stylesheets and resolving conflicts between different css rules and declarations, when more than one rules applies to a certain element
+
+Inheritance
+Is a way of propagating property from parent element up to the child element
+
+ACHITECT MINDSET
+-THINK -> Think about the layout of your webpage or your web app before writing the code
+-BUILD -> Build your layout in html and css with a consistent structure for naming classes
+-ARCHITECT -> Create a logical architecture for css with files and folders
+
+BEM(BLOCK ELEMENT MODIFIER)
+BLOCK: Standalone component that is meaningful on its own
+ELEMENT: Part of a block that has no standalone meaning
+MODIFIER: A different version of the block or an element i.e different modification of a block or element. It is a way to modify the behavior or appearance of a block or element
+
+The 7/1 Pattern
+7 different folders for partial sass files, and 1 main sass file to import all other files into a compiled css stylesheet
+
+-base/ => Basic project definitions. It is use for reseting styles, animations, typography, utilities. Base is where we put our basic project definitions
+-components/ => Reusable building block that make up our website or app. Components are held together by the layout of the page
+-layout/ => For each of piece of the global layout of the entire project eg a gloabal footer, header and more. The layout should work everywhere in our web page
+-pages/ => When we have a specific style for a page eg home then they should be put inside the pages folder
+-themes/ We use this folder when have a app that have different themes
+-abstracts/ => Where we put code that won't output any css eg variables, mixins, functions
+-vendors => where we can put third party styles eg bootstrap, animation libaries
+
+Three Basic Principles for responsive web design
+
+1. Fluid Grids and Layout: To allow content to easily adapt to the current viewport width used to browse the website. Uses % rather than px for all layout-related length
+
+2. Flexible and Responsive Images: Images behave differently than text content, and so we need to ensure that they also adapt nicely to the current viewport
+
+3. Media Queries: Allow us to changes styles based on different viewport
